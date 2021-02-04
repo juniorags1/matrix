@@ -8,7 +8,7 @@ import { buildAuthStrategy } from "./strategy";
 const authConfig = getAuthConfig();
 var isAuthorized = domainAuthorization(getAllowedDomains());
 
-isAuthorized = userAuthorization(getAllowedUsers());
+//isAuthorized = userAuthorization(getAllowedUsers());
 
 passport.use(buildAuthStrategy(authConfig, isAuthorized));
 passport.serializeUser((user, done) => done(null, user));
