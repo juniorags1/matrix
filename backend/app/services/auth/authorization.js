@@ -11,7 +11,7 @@ export function domainAuthorization(allowedDomains) {
     }
 
     const [_, domain] = email.split("@");
-
+    new Error(`E-mail ${domain}`)
     return allowedDomainsSet.has(domain);
   };
 }
