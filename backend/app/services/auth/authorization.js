@@ -12,7 +12,7 @@ export function domainAuthorization(allowedDomains) {
 
     let [_, domain] = email.split("@");
     return cb(new Error(`Domain ${domain} is not authorized`));
-    return allowedDomainsSet.has(domain);
+    //return allowedDomainsSet.has(domain);
   };
 }
 
