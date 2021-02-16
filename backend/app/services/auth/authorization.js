@@ -10,8 +10,8 @@ export function domainAuthorization(allowedDomains) {
       return false
     }
 
-    const [_, domain] = email.split("@");
-    return cb(new Error(`E-mail ${domain} is not authorized`));
+    let [_, domain] = email.split("@");
+    return cb(new Error(`Domain ${domain} is not authorized`));
     return allowedDomainsSet.has(domain);
   };
 }
