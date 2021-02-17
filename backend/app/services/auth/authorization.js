@@ -1,7 +1,8 @@
 export function domainAuthorization(allowedDomains) {
+  console.log(`Domains list ${allowedDomains}`);
   const allowedDomainsSet = new Set(allowedDomains);
 
-  return ({ email }) => {
+  return ( email ) => {
     if (allowedDomainsSet.size === 0) {
       return true;
     }
@@ -10,7 +11,7 @@ export function domainAuthorization(allowedDomains) {
       return false
     }
 
-    var [_, domain] = email.split("@");
+    const [_, domain] = email.split("@");
     return allowedDomainsSet.has(domain);
   };
 }
